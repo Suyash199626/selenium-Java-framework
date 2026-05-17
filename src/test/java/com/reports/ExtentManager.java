@@ -1,0 +1,49 @@
+package com.reports;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public class ExtentManager {
+
+    private static ExtentReports extent;
+
+    public static ExtentReports getInstance() {
+
+        if (extent == null) {
+
+            String timeStamp = new SimpleDateFormat(
+                    "yyyyMMdd_HHmmss"
+            ).format(new Date());
+
+            String reportPath =
+                    System.getProperty("user.dir")
+                    + "/Reports/AutomationReport_"
+                    + timeStamp
+                    + ".html";
+
+            ExtentSparkReporter spark =
+                    new ExtentSparkReporter(reportPath);
+
+            spark.config().setReportName(
+                    "Automation Test Report"
+            );
+
+            spark.config().setDocumentTitle(
+                    "Selenium Framework Report"
+            );
+
+            extent = new ExtentReports();
+
+            extent.attachReporter(spark);
+
+            extent.setSystemInfo("Framework", "Selenium");
+            extent.setSystemInfo("Language", "Java");
+            extent.setSystemInfo("Tester", "Suyash");
+        }
+
+        return extent;
+    }
+}

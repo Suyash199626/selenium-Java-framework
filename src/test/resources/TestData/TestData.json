@@ -1,0 +1,9 @@
+{
+  "USERNAME": "standard_user",
+  "PASSWORD": "secret_sauce",
+  "browser": "chrome",
+  "Url": "https://www.saucedemo.com/",
+  "FirstName": "ABC",
+  "LastName": "DEF",
+  "ZipCode": "123456"
+}

@@ -1,0 +1,12 @@
+browser=chrome
+
+# WebDriverManager configs
+wdm.cache=true
+wdm.offline=false
+wdm.driverVersion=
+wdm.proxy=
+wdm.avoidBrowserDetection=false
+
+# Browser configs
+headless=false
+
