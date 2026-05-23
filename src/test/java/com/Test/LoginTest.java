@@ -10,13 +10,14 @@ import com.framework.baseTest.BaseTest;
 import com.webPages.AddToCart;
 import com.webPages.LogOutPage;
 import com.webPages.LoginPage;
+import com.webPages.ShadowDom;
 
 @Listeners(com.listeners.TestListener.class)
 public class LoginTest extends BaseTest {
 
 	@Test
 	public void validLoginTest() throws IOException {
-		String url = jsonValues.get("Url").asText();
+		String url = jsonValues.get("URL").asText();
 		commonUtils.navigateURL(driver, url, 10);
 		LoginPage login = new LoginPage(driver);
 		// 1. Successful Login Flow
@@ -36,5 +37,15 @@ public class LoginTest extends BaseTest {
 		logout.LogOut();
 
 	}
+
+	@Test
+	public void shadowDom() throws IOException, InterruptedException {
+		String url = jsonValues.get("URL1").asText();
+		commonUtils.navigateURL(driver, url, 10);
+		ShadowDom shadowRoot=new ShadowDom(driver);
+		shadowRoot.VerifyHomepage();
+		
+	}
+	
 	
 }

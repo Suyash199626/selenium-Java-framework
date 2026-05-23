@@ -2,7 +2,8 @@
   "USERNAME": "standard_user",
   "PASSWORD": "secret_sauce",
   "browser": "chrome",
-  "Url": "https://www.saucedemo.com/",
+  "URL": "https://www.saucedemo.com/",
+  "URL1":"https://shop.polymer-project.org/list/mens_outerwear",
   "FirstName": "ABC",
   "LastName": "DEF",
   "ZipCode": "123456"
