@@ -88,6 +88,7 @@ public class ShadowDom {
 					"Checkout page is displayed successfully", "PASS");
 			commonUtils.captureScreenshot(driver, "Add to Cart Page");
        }
+
        else
        {
     	   Reporting.logResult("User clicks on Checkout", "Checkout page should be displayed successfully",
