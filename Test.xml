@@ -9,7 +9,8 @@
     <test name="Login Test">
 
         <classes>
-            <class name="com.Test.LoginTest"/>
+            <!-- <class name="com.Test.LoginTest"/> -->
+            <class name="com.Test.VibiumDemo"/>
         </classes>
 
     </test>
